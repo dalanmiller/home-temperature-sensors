@@ -23,7 +23,7 @@ temperature = bmp280.get_temperature()
 pressure = bmp280.get_pressure()
 
 doc = {
-    "datetime": datetime.datetime.now(),
+    "datetime": datetime.datetime.now(datetime.timezone.utc),
     "temperature": temperature,
     "pressure": pressure,
     "sensor": gethostname(),
